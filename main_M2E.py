@@ -9,8 +9,8 @@ GM_sun = 1.32712440041279419e11 # 太陽の重力定数 [km^3/s^2]
 ephemeris_M = []
 
 # with open("data_M2E/f1_mars.txt", "r") as file:
-with open("data_M2E/f2_mars.txt", "r") as file:
-# with open("data_M2E/f3_mars.txt", "r") as file:
+# with open("data_M2E/f2_mars.txt", "r") as file:
+with open("data_M2E/f3_mars.txt", "r") as file:
     buffer = []  # 一時的に行を保持するリスト
     for line in file:
         # 行をバッファに追加
@@ -39,8 +39,8 @@ with open("data_M2E/f2_mars.txt", "r") as file:
 ephemeris_E = []
 
 # with open("data_M2E/f1_earth.txt", "r") as file:
-with open("data_M2E/f2_earth.txt", "r") as file:
-# with open("data_M2E/f3_earth.txt", "r") as file:
+# with open("data_M2E/f2_earth.txt", "r") as file:
+with open("data_M2E/f3_earth.txt", "r") as file:
     buffer = []  # 一時的に行を保持するリスト
     for line in file:
         # 行をバッファに追加
@@ -102,14 +102,14 @@ for i_dep in range(len(ephemeris_M)):
 
         
 # with open("result_M2E/M2E_f1_plot.txt", "w") as file:
-with open("result_M2E/M2E_f2_plot.txt", "w") as file:
-# with open("result_M2E/M2E_f3_plot.txt", "w") as file:
+# with open("result_M2E/M2E_f2_plot.txt", "w") as file:
+with open("result_M2E/M2E_f3_plot.txt", "w") as file:
   for res in result:
     file.write(" ".join(map(str, res)) + "\n")
 
 # with open("result_M2E/M2E_f1_all.txt", "w") as file:
-with open("result_M2E/M2E_f2_all.txt", "w") as file:
-# with open("result_M2E/M2E_f3_all.txt", "w") as file:
+# with open("result_M2E/M2E_f2_all.txt", "w") as file:
+with open("result_M2E/M2E_f3_all.txt", "w") as file:
     for res_all in result_all:
         formatted = []
         for item in res_all:
@@ -122,7 +122,7 @@ with open("result_M2E/M2E_f2_all.txt", "w") as file:
         file.write(" ".join(formatted) + "\n")
 
 # with open("result_M2E/M2E_f1_selected.txt", "w") as file:
-with open("result_M2E/M2E_f2_selected.txt", "w") as file:
-# with open("result_M2E/M2E_f3_selected.txt", "w") as file:
+# with open("result_M2E/M2E_f2_selected.txt", "w") as file:
+with open("result_M2E/M2E_f3_selected.txt", "w") as file:
   for res_sel in result_selected:
     file.write(" ".join(map(str, res_sel)) + "\n")
