@@ -94,6 +94,12 @@ for i_dep in range(len(ephemeris_M)):
           result.append([ephemeris_M[i_dep][0], ephemeris_E[i_arr][0], tof_days, float('nan'), float('nan'), float('nan')])
           result_all.append([dep_date, ephemeris_M[i_dep][0], arr_date, ephemeris_E[i_arr][0], float('nan'), float('nan'), float('nan'), float('nan')])  # 不要なデータはNaNで埋める
           result_selected.append([ephemeris_M[i_dep][0], ephemeris_E[i_arr][0], float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan')])
+    else:
+      result.append([ephemeris_M[i_dep][0], ephemeris_E[i_arr][0], tof_days, float('nan'), float('nan'), float('nan')])
+      result_all.append([dep_date, ephemeris_M[i_dep][0], arr_date, ephemeris_E[i_arr][0], float('nan'), float('nan'), float('nan'), float('nan')])  # 不要なデータはNaNで埋める
+      result_selected.append([ephemeris_M[i_dep][0], ephemeris_E[i_arr][0], float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan')])
+       
+
         
 # with open("result_M2E/M2E_f1_plot.txt", "w") as file:
 with open("result_M2E/M2E_f2_plot.txt", "w") as file:

@@ -97,7 +97,10 @@ for i_dep in range(len(ephemeris_E)):
           result.append([ephemeris_E[i_dep][0], ephemeris_M[i_arr][0], tof_days, float('nan'), float('nan'), float('nan')])
           result_all.append([dep_date, ephemeris_E[i_dep][0], arr_date, ephemeris_M[i_arr][0], float('nan'), float('nan'), float('nan'), float('nan')])  # 詳細な情報はNaNで埋める
           result_selected.append([ephemeris_E[i_dep][0], ephemeris_M[i_arr][0], float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan')])  # 位置ベクトルと速度ベクトルを含む詳細な情報(数値のみ)
-        
+    else:
+      result.append([ephemeris_E[i_dep][0], ephemeris_M[i_arr][0], tof_days, float('nan'), float('nan'), float('nan')])
+      result_all.append([dep_date, ephemeris_E[i_dep][0], arr_date, ephemeris_M[i_arr][0], float('nan'), float('nan'), float('nan'), float('nan')])  # 詳細な情報はNaNで埋める
+      result_selected.append([ephemeris_E[i_dep][0], ephemeris_M[i_arr][0], float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan'), float('nan')])       
 # with open("result_E2M/E2M_f1_plot.txt", "w") as file:
 # with open("result_E2M/E2M_f2_plot.txt", "w") as file:
 with open("result_E2M/E2M_f3_plot.txt", "w") as file:
